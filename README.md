@@ -4,6 +4,10 @@ Real-time water level monitoring with alerting and visualization using OpenWeath
 
 ## Architecture
 
+![System Architecture](Flood%20monitoring%20systemUML.jpeg)
+
+## Architecture
+
 - **Backend**: Java 21 (Spring Boot, Virtual Threads, WebSockets)
 - **Frontend**: Vue.js 3 + TypeScript + Leaflet
 - **Database**: MySQL
