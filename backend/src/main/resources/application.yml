@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: rish-flood-monitoring
+  datasource:
+    url: jdbc:mysql://localhost:3306/rish_monitoring
+    username: root
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8080
+
+monitoring:
+  simulation:
+    interval-ms: 1000
+    stations: STATION_001,STATION_002,STATION_003
+  thresholds:
+    yellow: 2.0
+    orange: 2.5
+    red: 3.0
+
+external-data:
+  enabled: true
+  api-key: ${OPENWEATHER_API_KEY:}
+  poll-interval-ms: 60000
+  fallback-to-simulation: true

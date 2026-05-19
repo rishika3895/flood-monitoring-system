@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WaterLevelReading",
+  "type": "object",
+  "required": ["stationId", "waterLevel", "timestamp"],
+  "properties": {
+    "stationId": {
+      "type": "string",
+      "pattern": "^STATION_[0-9]{3}$",
+      "description": "Unique station identifier"
+    },
+    "waterLevel": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Water level in meters"
+    },
+    "rainfall": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Rainfall in mm"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp"
+    },
+    "alertLevel": {
+      "type": "string",
+      "enum": ["GREEN", "YELLOW", "ORANGE", "RED"]
+    }
+  }
+}
