@@ -1,10 +1,10 @@
 # Flood Monitoring System
 
-Real-time water level monitoring with alerting and visualization using OpenWeatherMap API.
+A real-time flood monitoring system built with Java 21 and Vue.js 3, designed to track water levels across multiple stations in the Netherlands. The system integrates with the OpenWeatherMap API to fetch live rainfall data and automatically converts it into water level readings. An alert engine continuously evaluates incoming data against configurable thresholds, triggering multi-level alerts (Yellow, Orange, Red) when water levels rise. Alerts and readings are pushed instantly to a live dashboard via WebSockets, where stations are visualized as color-coded markers on an interactive map. The system includes a built-in weather simulation engine with flood scenario triggers, and automatically falls back to simulation if the external API becomes unavailable.
 
-## Architecture
+## UML Diagram
 
-![System Architecture](Flood%20monitoring%20systemUML.jpeg)
+![UML Diagram](Flood%20monitoring%20systemUML.jpeg)
 
 ## Architecture
 
